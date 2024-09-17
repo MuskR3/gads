@@ -1,0 +1,86 @@
+/* Reset básico para consistência em todos os navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilização do corpo e da página */
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e0e5ec;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Animação de fade-in para a página */
+body {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Container centralizado com design moderno */
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1), 
+                -10px -10px 30px rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 90%;
+    width: 400px;
+}
+
+/* Estilo do título com foco em acessibilidade */
+h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão de ação para melhorar a experiência do usuário */
+button {
+    padding: 15px 30px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 25px;
+    background: #6a11cb;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Efeito hover para o botão */
+button:hover {
+    background: #2575fc;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    button {
+        padding: 12px 20px;
+        font-size: 0.9em;
+    }
+}
